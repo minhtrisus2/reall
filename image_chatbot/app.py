@@ -77,7 +77,8 @@ uploaded_file = st.file_uploader(
 # Xử lý khi có file được tải lên
 if uploaded_file is not None:
     # Hiển thị hình ảnh đã tải lên
-    st.image(uploaded_file, caption="Hình ảnh đã tải lên.", use_column_width=True)
+    # ĐÃ THAY ĐỔI: use_column_width=True thành use_container_width=True
+    st.image(uploaded_file, caption="Hình ảnh đã tải lên.", use_container_width=True)
     st.markdown("---")
 
     # Hiển thị spinner trong khi dự đoán
@@ -103,4 +104,3 @@ else:
 
 st.markdown("---")
 st.caption("Ứng dụng được xây dựng bằng Streamlit và TensorFlow (MobileNetV2).")
-
